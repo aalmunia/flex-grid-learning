@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    height: 100%;    
+}
+
+
+#main-grid-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% auto;
+    grid-template-rows: 15% auto;
+}
+
+#menu-header {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    padding: 3px;
+    background-color: #fb0;
+    grid-column: span 2;
+}
+
+#menu-header-container {
+    display: flex;
+    background-color: yellow;
+}
+
+#menu-header-left {
+    background-color: red;
+    width: 30%;
+}
+
+#menu-header-center {
+    background-color: green;
+    width: 40%;
+}
+
+#menu-header-right {
+    background-color: blue;
+    width: 30%;
+}

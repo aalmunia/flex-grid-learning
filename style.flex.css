@@ -1,0 +1,15 @@
+#menu-horizontal {
+    display: flex;
+    
+}
+
+#menu-horizontal > div {
+    flex: 1 0 auto;
+    align-items: center;
+}
+
+#menu-horizontal > div > * {
+    background-color: #FF0000;
+}
+
+

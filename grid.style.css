@@ -1,0 +1,172 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: monospace;
+    font-size: 14pt;
+}
+
+#main-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 10% auto;
+}
+
+#main-header {    
+    background-color: #fb0;
+    grid-column: span 2;
+}
+
+#main-header-container {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    justify-content: space-between;    
+    height: 100%;
+}
+
+#main-header-left {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    justify-content: space-evenly;
+    height: 100%;
+    flex: 0 1 20%;
+}
+
+#main-header-left > span {    
+    flex: 0 1 10%;    
+}
+
+#main-header-left > i {    
+    flex: 0 1 10%;
+}
+
+#main-header-center {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    justify-content: space-evenly;
+    height: 100%;    
+    flex: 0 1 50%;
+}
+
+#main-header-center > span {
+    flex: 0 1 10%;
+}
+
+#main-header-right {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    justify-content: space-evenly;
+    height: 100%;
+    /* background-color: blue; */
+    flex: 0 1 30%;
+}
+
+#main-header-right > i {
+    /* height: 100%;
+    background-color: brown; */
+    flex: 0 1 10%;
+}
+
+#lateral-menu {
+    background-color: #CCCCCC;
+    grid-column: span 1;
+    /* display: flex;
+    flex-flow: column; */
+}
+
+#lateral-menu-container {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    margin: 5%;
+}
+
+.lateral-menu-element {
+    display: inline-block;
+    flex: 0 1 10%;
+}
+
+.lateral-menu-element > i {
+    width: 20%;
+}
+
+.lateral-menu-element > span {
+    width: 80%;
+}
+
+.lateral-menu-separator {
+    width: 100%;
+    line-height: 9pt;
+}
+
+#main-application-container {    
+    grid-column: span 1;
+}
+
+#main-application {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+        background-color: #DDDDDD;    
+}
+
+#main-application > span {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #EEFF00;
+    text-align: center;
+    flex: 0 1 auto;
+}
+
+@media screen and (max-width: 1024px) {
+    #lateral-menu {        
+        display: none;
+        visibility: none;
+    }
+    
+    #main-application-container {        
+        grid-column: span 2;
+    }
+
+    #main-header-left > span:nth-child(2) {
+        display: none;
+        visibility: none;
+    }
+
+    #main-header-center > input {
+        display: none;
+        visibility: hidden;
+    }
+
+    #main-header-right > i:nth-child(3) {
+        display: none;
+        visibility: none;
+    }
+
+    /*  @todo: ¿Hay un selector que los recoja los dos, el 3 y el 4 */
+
+    #main-header-right > i:nth-child(5) {
+        display: none;
+        visibility: none;
+    }
+
+    #main-header-right > span:nth-child(1) {
+        display: none;
+        visibility: none;
+    }
+
+
+    /* #main-application > span {
+        width: 125px;
+        height: 125px;
+    } */
+}
